@@ -1,0 +1,16 @@
+#SECUENCIA FIBONACCI
+terminos = int(input("Ingrese el numero de terminos que quiere: "))
+if terminos <= 0:
+    print("No existe para este numero ")
+    exit()
+sucesion = list()
+dato_1 = 1
+dato_2 = 0
+sucesion.append(0)
+for i in range(terminos):
+    suma = dato_1 + dato_2
+    dato_1 = dato_2
+    dato_2 = suma
+    sucesion.append(suma)
+
+print(f"la sucesion es: {sucesion}")

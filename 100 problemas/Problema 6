@@ -1,0 +1,6 @@
+#INTERES COMPUESTO
+inversion = float(input("Ingrese la inversion inicial: "))
+tasa = float(input("Ingrese la tasa en porcentaje: "))
+tiempo = int(input("ingrese tiempo en años: "))
+tasa = tasa/100
+print(f"El monto final es de {inversion*(1+tasa)**tiempo}")

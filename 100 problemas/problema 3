@@ -1,0 +1,19 @@
+#FACTORIAL DE UN NUMERO 
+
+num = int(input("Inserte numero entero positivo para el factorial: "))
+
+if num < 0:
+    print("El numero factorial de ese numero no existe")
+    exit()
+elif num == 0:
+    print("1")
+    exit()
+
+factorial = 1
+limite = num
+
+for i in range(limite):
+    factorial = factorial * num
+    num = num - 1
+
+print(f"El factorial de su numero es: {factorial}")

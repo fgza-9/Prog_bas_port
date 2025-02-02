@@ -1,0 +1,13 @@
+#NUMERO PAR, IMPAR O MULTIPLO
+num = int(input("ingrese un numero entero "))
+divisor = 3
+for i in range(num-3):
+    if num%2 == 0:
+        print("el numero es par y multiplo de otro")
+        exit()
+    elif num%divisor == 0:
+        print ("el numero es impar y multiplo de otro")
+        exit()
+    else:
+        divisor = divisor + 1
+print("El numero es primo (no divisible)")

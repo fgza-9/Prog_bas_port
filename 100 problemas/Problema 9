@@ -1,0 +1,12 @@
+#LISTA DE NUMEROS PARES E IMPARES
+limit = int(input("ingrese un limite: "))
+num = 1
+pares = list()
+impares = list()
+for i in range(limit):
+    if num%2 == 0:
+        pares.append(num)
+    else:
+        impares.append(num)
+    num = num+1
+print(f"Pares: {pares}\nImpares: {impares}")

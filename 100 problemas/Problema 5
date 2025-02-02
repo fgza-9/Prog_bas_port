@@ -1,0 +1,15 @@
+#NUMERO PRIMO
+num = int(input("ingrese su numero: "))
+if num <= 0:
+    print("No es primo")
+    exit()
+
+divisor = 2
+
+for i in range(num - 2):
+    if  num % divisor == 0:
+        print("El numero no es primo")
+        exit()
+    else:
+        divisor = divisor + 1
+print("El numero si es primo")

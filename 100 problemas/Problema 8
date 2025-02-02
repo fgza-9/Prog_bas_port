@@ -1,0 +1,5 @@
+#AREA Y CIRCUNFERENCIA DE UN CIRCULO
+import math
+radio = float(input("Inserte el radio del circulo: "))
+
+print(f"El area del circulo es {math.pi*(radio**2)}, \nLa circunferencia es de {2*(math.pi*radio)}")

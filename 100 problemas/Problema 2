@@ -1,0 +1,15 @@
+#CALCULADORA BASICA
+
+print("Bienvenido a la calculadora:")
+
+a = float(input("inserte primer numero: "))
+b = float(input("inserte segundo numero: "))
+
+suma = a + b
+resta = a - b
+producto = a * b
+if b == 0:
+    division = "No existe"
+else:
+    division = a / b
+print(f"La suma es {suma},\n la resta es {resta},\n el producto es {producto},\n la division {division}\n Gracias por usar mi calculadora")

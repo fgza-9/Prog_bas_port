@@ -1,0 +1,2 @@
+archivo = open("Prog_bas_port/Semana_1/hola.txt", "w")
+print(archivo)
