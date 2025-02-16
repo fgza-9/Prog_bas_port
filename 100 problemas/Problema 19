@@ -1,0 +1,28 @@
+#DISTRIBUCIONES DE NUMEROS ALEATORIOS
+import random
+
+resultado1 = random.random()
+print(f"random.random(): {resultado1}")
+
+resultado2 = random.uniform(10, 50)
+print(f"random.uniform(): {resultado2}")
+
+resultado3 = random.triangular(0, 100, 50)
+print(f"random.triangular(): {resultado3}")
+
+resultado4 = random.betavariate(2, 5)
+print(f"random.betavariate(): {resultado4}")
+
+resultado5 = random.expovariate(1)
+print(f"random.expovariate(): {resultado5}")
+
+resultado6 = random.gammavariate(2, 3)
+print(f"random.gammavariate(): {resultado6}")
+
+resultado7 = random.gauss(0, 1)
+print(f"random.gauss(): {resultado7}")
+
+resultado8 = random.normalvariate(0, 1)
+print(f"random.normalvariate(): {resultado8}")
+
+    

@@ -1,0 +1,32 @@
+#BUSQUEDA lineal y binaria 
+from random import randint
+lista = list()
+for i in range(0,100):
+    lista.append(randint(0,150)) 
+
+num = int(input("ingrese numero a buscar entre 0 y 150: "))
+opcion = input("eliga opcion:\n1. Busqueda lineal\n2. Busqueda binaria\n")
+if opcion == "1":
+    for i in range(0, 100):
+        if lista[i] == num:
+            print(f"Su numero esta en la posicion{i}")
+            break
+        else:
+            print("El numero no esta en la lista")
+elif opcion == "2":
+    lista.sort()
+    inicio = 0
+    fin = len(lista)-1
+    for i in range(0,100):
+        mitad = int((fin + inicio)//2)
+        if lista[mitad] == num:
+            print(f"Tu numero esta en la posicion {mitad}")
+            exit()
+        elif lista[mitad] < num:
+            inicio = mitad + 1
+        else:
+            fin = mitad - 1
+    print("no existe el numero en la lista")
+
+
+

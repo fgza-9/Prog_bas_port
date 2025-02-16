@@ -1,0 +1,25 @@
+#METODOS DE ORDENAMIENTO
+lista = [64, 34, 25, 12, 22, 11, 90]
+
+#bubble sort
+n = len(lista)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if lista[j] > lista[j+1]:
+            lista[j], lista[j+1] = lista[j+1], lista[j]
+print("Lista ordenada por bubble sort:")
+print(lista)
+
+#Insercion
+
+
+for i in range(1, n):
+    clave = lista[i]
+    j = i - 1
+    while j >= 0 and lista[j] > clave:
+        lista[j + 1] = lista[j]
+        j -= 1
+    lista[j + 1] = clave
+
+print("Lista ordenada por inserción:")
+print(lista)

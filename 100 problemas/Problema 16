@@ -1,0 +1,15 @@
+#NUM DE VOCALES Y CONSONANTES
+cadena = input("ingrese cadena: ").lower()
+palabras = list(cadena)
+num = int(len(palabras))
+
+vocales = 0
+consonantes = 0
+
+for i in range(num):
+    if palabras[i] in ["a", "e", "i", "o", "u"]:
+        vocales = vocales + 1
+    else: 
+        consonantes = consonantes + 1
+
+print(f"Su cadena tiene {vocales} vocales y {consonantes} consonantes.")

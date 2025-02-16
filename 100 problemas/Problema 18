@@ -1,0 +1,18 @@
+#RESOLVER ECS CUADRATICAS
+def discriminante(a, b, c):
+    return (b**2-4*a*c)
+
+a = float(input("inserte el coeficiente A de la funcion cuadratica: "))
+b = float(input("inserte el coeficiente B de la funcion cuadratica: "))
+c = float(input("inserte el coeficiente C de la funcion cuadratica: "))
+
+dis = discriminante(a, b, c)
+
+if dis >= 0:
+    resultado1 = (-b + dis**1/2)/(2*a)
+    resultado2 = (-b - dis**1/2)/(2*a)
+else:
+    print("Discriminante menor que cero, no existe solucion real")
+    exit()
+
+print(f"El primer valor para x es: {resultado1}\nEl segundo es: {resultado2}")

@@ -1,0 +1,10 @@
+#PALINDROMOS
+palabra = input("inserte su palabra: ")
+palabra = palabra.lower()
+palabra = palabra.replace(" " , "")
+print(palabra)
+
+if palabra == palabra[::-1]:
+    print("Su palabra es un palindromo")
+else: 
+    print("Su palabra no es un palindromo")

@@ -1,0 +1,40 @@
+# PILA COLA Y LISTA ENLAZADA
+pila = []
+pila.append(1)
+pila.append(4)
+pila.append(6)
+pila.append(2)
+pila.append(1)
+
+print(pila)
+print(pila.pop(2))
+print(pila)
+print(pila[-1])
+print(pila)
+
+
+cola = []
+cola.append(6)
+cola.append(6)
+cola.append(6)
+cola.append(6)
+cola.append(6)
+
+print(cola)
+print(cola.pop(0))
+print(cola)
+print(cola[0])
+print(cola)
+
+
+tema1 = {'valor': "10", 'subtema': "diez"}
+tema2 = {'valor': "20", 'subtema': "veinte"}
+tema3 = {'valor': "30", 'subtema': "treinta"}
+
+tema1['subtema'] = tema2
+tema2['subtema'] = tema3
+
+actual = tema1
+for i in range(3):
+    print(actual['valor'])
+    actual = actual['subtema']

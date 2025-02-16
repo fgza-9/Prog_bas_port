@@ -1,2 +1,9 @@
-archivo = open("Prog_bas_port/Semana_1/hola.txt", "w")
-print(archivo)
+#EDITAR UN ARCHIVO
+prueba = 0
+
+with open('Prog_bas_port/prueba.txt','a') as prueba:
+    prueba.write("hola desde el problema 10")
+
+with open('Prog_bas_port/prueba.txt', 'r') as prueba:
+    info = prueba.read()
+    print(info)
