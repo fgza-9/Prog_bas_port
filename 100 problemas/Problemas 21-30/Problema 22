@@ -1,0 +1,13 @@
+#LANZAMIENTO DE DADO Y MONEDA
+import random as r
+
+opcion = input("Eliga objeto a lanzar:\n1.Dado\n2.Moneda\n")
+if opcion == "1":
+    ganador = r.randint(1, 6)
+    print(f"Al tirar el dado sale: {ganador}")
+elif opcion == "2":
+    ganador = r.choice(["cara", "cruz"])
+    print(f"Al tirar la moneda sale: {ganador}")
+else:
+    print("opcion no valida")
+

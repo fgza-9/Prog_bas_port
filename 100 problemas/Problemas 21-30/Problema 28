@@ -1,0 +1,47 @@
+#CUENTA BANCARIA
+
+id = 123456789
+saldo = 999999999
+bool = True
+while bool == True:
+    print('ingrese accion: \n1) Consultar saldo\n2) Realizar deposito\n3) Realizar retiro\n4) Salir')
+    accion = input()
+    if accion == '1':
+        print(f'La cuenta {id}, tiene un saldo de {saldo}')
+    elif accion == '2':
+        monto = input('Seleccione monto a depositar:\n1) 500$\n2) 1000$\n3) 2000$\n3) 4000$\n4) Monto personalizado\n')
+        if monto == '1':
+            saldo += 500
+            print(f'Se han depositado 500$. Nuevo saldo: {saldo}')
+        elif monto == '2':
+            saldo += 1000
+            print(f'Se han depositado 1000$. Nuevo saldo: {saldo}')
+        elif monto == '3':
+            saldo += 2000
+            print(f'Se han depositado 2000$. Nuevo saldo: {saldo}')
+        elif monto == '4':
+            saldo += 4000
+            print(f'Se han depositado 4000$. Nuevo saldo: {saldo}')
+        elif monto == '5':
+            monto_personalizado = float(input('Ingrese monto personalizado: '))
+            saldo += monto_personalizado
+            print(f'Se ha depositado {monto_personalizado}$. Nuevo saldo: {saldo}')
+        else:
+            print('Opción no válida')
+    elif accion == '3':
+        retiro = float(input('Ingrese monto a retirar: '))
+        if retiro <= saldo:
+            saldo -= retiro
+            print(f'Se han retirado {retiro}$. Nuevo saldo: {saldo}$')
+        else:
+            print('Saldo insuficiente')
+    elif accion == '4':
+        bool = False
+    else:
+        print('Opción no válida')
+
+
+
+
+
+

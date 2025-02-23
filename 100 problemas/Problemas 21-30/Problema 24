@@ -1,0 +1,13 @@
+#SUMA DE SERIE NUMERICA
+def formula(x, y, z):
+    return x + (y) * z
+inicio = float(input("ingrese el termino de inicio: "))
+terminos = int(input("ingrese el numero de terminos : "))
+diferencia = float(input("ingrese la diferencia entre terminos: "))
+
+suma = 0
+for i in range(terminos):
+    resultado = formula(inicio, i, diferencia)
+    suma = suma + resultado
+
+print(suma)

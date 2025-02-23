@@ -1,0 +1,30 @@
+#CONVERSOR DE UNIDADES
+def convertir_unidad(valor, tipo):
+    if tipo == "1":
+        return valor * 1000
+    elif tipo == "2":
+        return valor / 1000
+    elif tipo == "3":
+        return valor * 1000
+    elif tipo == "4":
+        return valor / 1000
+    elif tipo == "5":
+        return (valor * 9/5) + 32
+    elif tipo == "6":
+        return (valor - 32) * 5/9
+    else:
+        return "Conversión no válida"
+
+print("opciones de conversion:")
+print("1 - kilometros a metros")
+print("2 - metros a kilometros")
+print("3 - kilogramos a gramos")
+print("4 - gramos a kilogramos")
+print("5 - celsius a fahrenheit")
+print("6 - fahrenheit a celsius")
+
+tipo = input("Elige una opción (1-6): ")
+valor = float(input("Ingrese el valor a convertir: "))
+
+resultado = convertir_unidad(valor, tipo)
+print(f"Resultado: {resultado}")

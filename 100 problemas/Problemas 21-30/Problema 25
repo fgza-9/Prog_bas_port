@@ -1,0 +1,13 @@
+#HISTOGRAMA DE DATOS
+
+import matplotlib.pyplot as pyp
+import pandas as pd
+datos = {
+'nombre': ['María', 'Luis', 'Carmen', 'Antonio', 'Sofía', 'Javier', 'Elena', 'Ricardo', 'Fernanda', 'Pablo', 
+'Andrea', 'José', 'Valeria', 'Diego', 'Lucía', 'Manuel', 'Raquel', 'Hugo', 'Isabel', 'Daniel'],
+'edad': [18, 22, 20, 21, 19, 23, 21, 22, 20, 24, 19, 22, 21, 23, 18, 24, 20, 22, 19, 25]
+}
+df = pd.DataFrame(datos)
+df.hist('edad')
+
+pyp.show()

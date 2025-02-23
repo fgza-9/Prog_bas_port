@@ -1,0 +1,31 @@
+#DATOS ESTADISTICOS
+import numpy as np
+import pandas as pd
+
+
+datos = np.random.randint(1, 101, size=100)
+
+tabla = pd.DataFrame(datos, columns=['valor'])
+
+
+media = tabla['valor'].mean()
+mediana = tabla['valor'].median()
+desviacion_estandar = tabla['valor'].std()
+varianza = tabla['valor'].var()
+minimo = tabla['valor'].min()
+maximo = tabla['valor'].max()
+rango = maximo - minimo
+cuartil_25 = tabla['valor'].quantile(0.25)
+cuartil_50 = tabla['valor'].quantile(0.50)
+cuartil_75 = tabla['valor'].quantile(0.75)
+
+print(f"Media: {media}")
+print(f"Mediana: {mediana}")
+print(f"Desviación Estándar: {desviacion_estandar}")
+print(f"Varianza: {varianza}")
+print(f"Mínimo: {minimo}")
+print(f"Máximo: {maximo}")
+print(f"Rango: {rango}")
+print(f"Cuartil 25%: {cuartil_25}")
+print(f"Cuartil 50% (Mediana): {cuartil_50}")
+print(f"Cuartil 75%: {cuartil_75}")

@@ -1,0 +1,23 @@
+#AGENDA DE CONTACTOS
+import pandas as pd
+
+bool = True
+agenda = {
+    'NOMBRE':[], 'NUMERO':[]
+}
+while bool == True:
+    cond = input('Desea ingresar un contacto?\n1) Si\n2) No\n')
+    if cond == '1':
+        nombre = input('ingrese nombre: ')
+        num = int(input('ingrese numero de telefono: '))
+        agenda['NOMBRE'].append(nombre)
+        agenda['NUMERO'].append(num)
+    elif cond == '2':
+        bool = False
+    else:
+        print("opcion no valida")
+        bool = False
+agenda_formato = pd.DataFrame(agenda)
+print(agenda_formato)
+
+
