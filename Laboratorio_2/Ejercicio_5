@@ -1,0 +1,30 @@
+
+import conversor
+
+
+while True:
+    print("1. Convertir Kilómetros a Millas")
+    print("2. Convertir Celsius a Fahrenheit")
+    print("3. Convertir Litros a Galones")
+    print("4. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == '1':
+        km = float(input("Ingrese la cantidad de kilómetros: "))
+        print(f"{km} km son {conversor.kilometros_millas(km):.2f} millas")
+
+    elif opcion == '2':
+        celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+        print(f"{celsius}°C son {conversor.celsius_fahrenheit(celsius):.2f}°F")
+
+    elif opcion == '3':
+        litros = float(input("Ingrese la cantidad de litros: "))
+        print(f"{litros} litros son {conversor.litros_galones(litros):.2f} galones")
+
+    elif opcion == '4':
+        print("Saliendo del programa")
+        break
+
+    else:
+        print("Opción no válida. Intente nuevamente.")

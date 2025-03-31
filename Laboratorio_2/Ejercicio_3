@@ -1,0 +1,41 @@
+directorio = list()
+
+def crear_registro(nombre, correo, numero):
+    nombre = (nombre, correo, numero)
+    directorio.append(nombre)
+
+def busqueda(nombre):
+    for element in directorio:
+        if element[0] == nombre:
+            print(element)
+            return
+    print("No existe ")
+
+def orden_alfabetico():
+    directorio_ordenado = sorted(directorio)
+    return directorio_ordenado
+
+crear_registro("Juan", "juan@ejemplo.com", "123456789")
+crear_registro("Ana", "ana@ejemplo.com", "987654321")
+crear_registro("Carlos", "carlos@ejemplo.com", "555123456")
+
+
+while True:
+    opcion = input("ingrese una opcion:\n1. crear registro\n2. buscar registro\n3. registro ordenado\n4. Salir\n")
+    if opcion == '1':
+        x=input("ingrese nombre: ")
+        y=input("ingrese correo: ")
+        z=input("ingrese numero: ")
+        crear_registro(x,y,z)
+    elif opcion == '2':
+        nombre = input("nombre a buscar: ")
+        busqueda(nombre)
+    elif opcion == '3':
+        print(orden_alfabetico())
+    elif opcion == '4':
+        break
+    else:
+        print("opcion no valida")
+
+
+

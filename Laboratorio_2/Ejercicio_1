@@ -1,0 +1,29 @@
+
+texto = input("ingrese el texto: ")
+texto = texto.lower()
+lista = texto.split()
+
+print(f"El texto tiene {len(lista)} palabras")
+
+variedad = set()
+
+for i in range(1,len(lista)+1):
+    variedad.add(lista[i-1])
+print(f"El texto contiene {len(variedad)} palabras diferentes")
+
+num_palabras = {}
+variedad = list(variedad)
+
+for i in range(len(variedad)):
+    contador = 0
+    palabra = variedad[i]
+    for j in range(len(lista)):
+        if palabra == lista[j]:
+            contador += 1
+    num_palabras[palabra] = contador
+print(f"Cada palabra del texto y sus repeticiones:\n{num_palabras}")
+
+palabra_mas_repetida = max(num_palabras, key=num_palabras.get)
+cantidad_maxima = num_palabras[palabra_mas_repetida]
+
+print(f"La palabra mas repetida es '{palabra_mas_repetida}' con {cantidad_maxima} repeticiones")

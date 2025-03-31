@@ -1,0 +1,25 @@
+import turtle
+
+def curva_koch(t, longitud, nivel):
+    if nivel == 0:
+        t.forward(longitud)
+    else:
+        longitud /= 3
+        curva_koch(t, longitud, nivel - 1)
+        t.left(60)
+        curva_koch(t, longitud, nivel - 1)
+        t.right(120)
+        curva_koch(t, longitud, nivel - 1)
+        t.left(60)
+        curva_koch(t, longitud, nivel - 1)
+
+# Configuración de la pantalla y la tortuga
+pantalla = turtle.Screen()
+t = turtle.Turtle()
+t.speed(0)
+
+# Dibujar la curva de Koch con 4 niveles de recursión
+curva_koch(t, 300, 3)
+
+# Finaliza el dibujo
+pantalla.mainloop()

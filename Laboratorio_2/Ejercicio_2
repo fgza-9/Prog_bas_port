@@ -1,0 +1,56 @@
+
+inventario = {}
+
+
+
+
+def agregar_producto(nombre, categoria, precio, cantidad):
+    if nombre not in inventario:
+        inventario[nombre] = [categoria, precio, cantidad]
+        return "elemento agregado"
+    else:
+        return "producto ya registrado"
+
+def eliminar_producto(nombre):
+    if nombre in inventario:
+        del inventario[nombre]
+        return "elemento eliminado exitosamente"
+    else:
+        return "no existe el elemento"
+
+def busqueda(nombre):
+    if nombre in inventario:
+        print(inventario[nombre])
+
+def productos_ordenados():
+    inventario_ordenado = dict(sorted(inventario.items(), key = lambda item: item[1][1]))
+    for producto, detalles in inventario_ordenado.items():
+        print(f"{producto} - Categoria: {detalles[0]}, Precio: {detalles[1]}, Cantidad: {detalles[2]}")
+bool = True
+while bool:
+    eleccion = input("Ingrese opción:\n1. Agregar producto\n2. Eliminar producto\n3. Buscar producto\n4. Productos ordenados\n5. Salir\n")
+    
+    if eleccion == '1':
+        nombre = input("Ingrese el nombre del producto: ")
+        categoria = input("Ingrese la categoría del producto: ")
+        precio = float(input("Ingrese el precio del producto: "))
+        cantidad = int(input("Ingrese la cantidad del producto: "))
+        print(agregar_producto(nombre, categoria, precio, cantidad))  
+    
+    elif eleccion == '2':
+        nombre = input("Ingrese el nombre del producto a eliminar: ")
+        print(eliminar_producto(nombre)) 
+    
+    elif eleccion == '3':
+        nombre = input("Ingrese el nombre del producto a buscar: ")
+        busqueda(nombre)
+    
+    elif eleccion == '4':
+        productos_ordenados() 
+    
+    elif eleccion == '5':
+        bool = False
+        print("Saliendo del programa")
+
+    else:
+        print("Opción no válida. Intente nuevamente")

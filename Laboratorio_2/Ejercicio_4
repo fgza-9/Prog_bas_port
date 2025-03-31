@@ -1,0 +1,22 @@
+
+
+def estadisticas(*args):
+    media = lambda nums: sum(nums) / len(nums) if len(nums) > 0 else 0
+
+    mediana = lambda nums: (
+        sorted(nums)[len(nums) // 2] if len(nums) % 2 != 0  
+        else (sorted(nums)[len(nums) // 2 - 1] + sorted(nums)[len(nums) // 2]) / 2  
+    )
+
+    desviacion = lambda nums: (
+        (sum((x - media(nums)) ** 2 for x in nums) / (len(nums) - 1)) ** 0.5 if len(nums) > 1 else 0
+    )
+
+    return media(args), mediana(args), desviacion(args)
+
+numeros = list(map(float, input("Ingrese números separados por espacio: ").split()))
+promedio, mediana, desviacion = estadisticas(*numeros)
+
+print(f"Promedio: {promedio}")
+print(f"Mediana: {mediana}")
+print(f"Desviación estándar: {desviacion}")
